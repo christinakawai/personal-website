@@ -9,12 +9,12 @@
 }
 
 [data-theme="dark"] {
-  --bg:        #0a0a0a;
-  --text:      #f0f0f0;
-  --muted:     #999999;
-  --border:    #2a2a2a;
+  --bg:        #575254;
+  --text:      #fefefe;
+  --muted:     #d0cbcb;
+  --border:    #e0e0e0;
   --accent:    #ff6b9d;
-  --pill-bg:   #575254;
+  --pill-bg:   #ffe0eb;
 }
 
 /* ── RESET & BASE ───────────────────────────────────── */
@@ -55,8 +55,8 @@ body {
   border-radius: 50px;
   font-size: 1rem;
   transition: transform 0.2s, background 0.2s;
-  color: #575254;
   border: 2px solid var(--pill-bg);
+  color: #575254;
 }
 
 .nav-pill:hover {
@@ -112,8 +112,8 @@ body {
   font-weight: normal;
   white-space: nowrap;
   position: absolute;
-  color: #575254;
-  animation: slideLeftToRight 5s linear infinite;
+  color: var(--text);
+  animation: slideLeftToRight 10s linear infinite;
 }
 
 @keyframes slideLeftToRight {
@@ -157,6 +157,7 @@ body {
   width: 100%;
   object-fit: cover;
   margin-bottom: 0.5rem;
+  border-radius: 20px;
 }
 
 /* ── PAGE CONTENT (for other pages) ─────────────────── */
@@ -198,7 +199,6 @@ body {
 .about-photos img {
   width: 100%;
   border-radius: 8px;
-  border: 2px solid var(--border);
 }
 
 /* ── TAGS ───────────────────────────────────────────── */
@@ -231,13 +231,15 @@ h3 {
 }
 
 .project-card h3 {
-  font-size: 1.3rem;
+  color: #1a1a1a;
+  font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 .project-card p {
-  color: var(--muted);
+  color: #666666;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -246,6 +248,15 @@ h3 {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.project-tags .tag {
+  padding: 0.4rem 1rem;
+  background: #575254;
+  color: white;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  border: 2px solid #575254;
 }
 
 .project-link {
