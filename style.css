@@ -14,13 +14,11 @@
   --muted:     #999999;
   --border:    #2a2a2a;
   --accent:    #ff6b9d;
-  --pill-bg:   #3d1f2b;
+  --pill-bg:   #575254;
 }
 
 /* ── RESET & BASE ───────────────────────────────────── */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -29,8 +27,8 @@ html {
 }
 
 body {
-  font-family: 'Comic Sans MS', 'Marker Felt', cursive, sans-serif;
-  font-size: 18px;
+  font-family: sans-serif;
+  font-size: 35px;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
@@ -45,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 2rem;
   padding: 1.5rem;
   flex-wrap: wrap;
 }
@@ -53,12 +51,12 @@ body {
 .nav-pill {
   padding: 0.5rem 1.2rem;
   background: var(--pill-bg);
-  color: var(--text);
   text-decoration: none;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: transform 0.2s, background 0.2s;
-  border: 2px solid transparent;
+  color: #575254;
+  border: 2px solid var(--pill-bg);
 }
 
 .nav-pill:hover {
@@ -69,6 +67,7 @@ body {
 .nav-pill.active {
   background: var(--accent);
   color: white;
+  border-color: var(--accent);
 }
 
 /* Dark mode toggle */
@@ -96,9 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 2rem 4rem;
   width: 100%;
 }
 
@@ -107,37 +104,41 @@ body {
   overflow: hidden;
   margin-bottom: 3rem;
   position: relative;
-  height: 150px;
+  height: 200px;
 }
 
 .sliding-name {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: normal;
   white-space: nowrap;
   position: absolute;
-  animation: slideLeftToRight 15s linear infinite;
+  color: #575254;
+  animation: slideLeftToRight 5s linear infinite;
 }
 
 @keyframes slideLeftToRight {
   0% {
-    left: -100%;
+    transform: translateX(-100%);
   }
   100% {
-    left: 100%;
+    transform: translateX(100%);
   }
 }
 
 /* ── CONTENT GRID (text + picture) ──────────────────── */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 200px;
-  gap: 2rem;
+  grid-template-columns: 2fr 300px;
+  gap: 4rem;
   align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .text-content {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
+  max-width: 900px;
 }
 
 .text-content p {
@@ -147,7 +148,6 @@ body {
 
 /* ── PICTURE BOX ────────────────────────────────────── */
 .picture-box {
-  border: 3px solid var(--text);
   padding: 0.5rem;
   position: relative;
   text-align: center;
@@ -155,25 +155,14 @@ body {
 
 .picture-box img {
   width: 100%;
-  aspect-ratio: 3/4;
   object-fit: cover;
   margin-bottom: 0.5rem;
-}
-
-.picture-label {
-  font-size: 1rem;
-  line-height: 1.2;
-  text-align: center;
-  margin: 0;
-  color: var(--text);
 }
 
 /* ── PAGE CONTENT (for other pages) ─────────────────── */
 .page-content {
   flex: 1;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 4rem;
   width: 100%;
 }
 
