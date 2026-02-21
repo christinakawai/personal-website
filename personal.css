@@ -1,0 +1,144 @@
+/* ── PERSONAL PAGE CAROUSEL STYLES ───────────────────── */
+
+.carousel-section {
+  margin-bottom: 4rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #575254;
+}
+
+[data-theme="dark"] .section-heading {
+  color: #fefefe;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  overflow: visible;
+}
+
+.carousel-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(255, 107, 157, 0.3);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay with pink translucent background */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(252, 158, 189, 0.9), rgba(255, 254, 254, 0.85));
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-item:hover .hover-overlay {
+  opacity: 1;
+}
+
+.hover-overlay p {
+  color: #203f5f;
+  animation: fadeInUp 0.4s ease;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Carousel navigation buttons */
+.carousel-btn {
+  background: #ffe0eb;
+  border: 2px solid #ffe0eb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #575254;
+  transition: transform 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+  background: #ff6b9d;
+  color: white;
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+/* Hidden items for carousel scroll effect */
+.carousel-item.hidden {
+  display: none;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 900px) {
+  .carousel-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .hover-overlay p {
+    font-size: 0.85rem;
+  }
+}

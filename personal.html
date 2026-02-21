@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal - Christina Kawai</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="personal.css" />
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-pill">home</a>
+    <a href="about.html" class="nav-pill">about me</a>
+    <a href="projects.html" class="nav-pill">projects</a>
+    <a href="personal.html" class="nav-pill active">personal</a>
+    <a href="contact.html" class="nav-pill">contact</a>
+    <button class="theme-toggle" id="theme-toggle">
+      <span id="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <main class="page-content">
+    <h1 class="page-title">Personal</h1>
+    <p class="subtitle">a little sneak peak into my life!</p>
+
+    <section class="carousel-section">
+      <h2 class="section-heading">favorite things to do</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="moveFavorites(-1)">‹</button>
+        
+        <div class="carousel-track" id="favorites-track">
+          
+          <!-- Item 1 -->
+          <div class="carousel-item">
+            <img src="img/kiki.jpg" alt="Favorite thing 1 (my dog named Kiki)" />
+            <div class="hover-overlay">
+              <p>hanging out with my lovely dog kiki (named after the cat from 
+                kiki's delivery service).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <img src="img/snowboard.jpg" alt="Favorite thing 2 (snowboarding)" />
+            <div class="hover-overlay">
+              <p>ever since moving to washington, i picked up a new hobby of snowboarding!</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <img src="img/friends.jpg" alt="Favorite thing 3 (hanging out with friends)" />
+            <div class="hover-overlay">
+              <p>hanging out with my friends from home.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="carousel-item">
+            <img src="img/hiking.jpg" alt="Favorite thing 4 (hiking)" />
+            <div class="hover-overlay">
+              <p>growing up in Hawai'i, i did a lot of hiking!</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="carousel-item">
+            <img src="favorite5.jpg" alt="Favorite thing 5" />
+            <div class="hover-overlay">
+              <p>Playing video games with friends late into the night.</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="carousel-item">
+            <img src="favorite6.jpg" alt="Favorite thing 6" />
+            <div class="hover-overlay">
+              <p>Dancing to my favorite music when no one's watching!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next" onclick="moveFavorites(1)">›</button>
+      </div>
+    </section>
+
+    <!-- FAVORITE FOODS SECTION -->
+    <section class="carousel-section">
+      <h2 class="section-heading">favorite noms</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn prev" onclick="moveFoods(-1)">‹</button>
+        
+        <div class="carousel-track" id="foods-track">
+          
+          <!-- Food 1 -->
+          <div class="carousel-item">
+            <img src="food1.jpg" alt="Favorite food 1" />
+            <div class="hover-overlay">
+              <p>Sushi! Fresh salmon and tuna rolls are my weakness.</p>
+            </div>
+          </div>
+
+          <!-- Food 2 -->
+          <div class="carousel-item">
+            <img src="food2.jpg" alt="Favorite food 2" />
+            <div class="hover-overlay">
+              <p>Homemade ramen with soft-boiled eggs and pork belly.</p>
+            </div>
+          </div>
+
+          <!-- Food 3 -->
+          <div class="carousel-item">
+            <img src="food3.jpg" alt="Favorite food 3" />
+            <div class="hover-overlay">
+              <p>Matcha lattes - the perfect afternoon pick-me-up.</p>
+            </div>
+          </div>
+
+          <!-- Food 4 -->
+          <div class="carousel-item">
+            <img src="food4.jpg" alt="Favorite food 4" />
+            <div class="hover-overlay">
+              <p>Pizza! Margherita with fresh basil is unbeatable.</p>
+            </div>
+          </div>
+
+          <!-- Food 5 -->
+          <div class="carousel-item">
+            <img src="food5.jpg" alt="Favorite food 5" />
+            <div class="hover-overlay">
+              <p>Chocolate chip cookies fresh from the oven.</p>
+            </div>
+          </div>
+
+          <!-- Food 6 -->
+          <div class="carousel-item">
+            <img src="food6.jpg" alt="Favorite food 6" />
+            <div class="hover-overlay">
+              <p>Tacos al pastor with fresh cilantro and lime!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-btn next" onclick="moveFoods(1)">›</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2026 Christina Kawai</footer>
+
+  <script src="script.js"></script>
+  <script src="personal.js"></script>
+
+</body>
+</html>
