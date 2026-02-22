@@ -404,3 +404,20 @@ footer {
     padding: 0.4rem 1rem;
   }
 }
+
+/* ── CURSOR SPARKLE EFFECT ───────────────────────────── */
+.cursor-glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.8) 0%, rgba(255, 182, 193, 0.4) 40%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  mix-blend-mode: screen;
+  filter: blur(3px);
+  box-shadow: 0 0 15px rgba(255, 107, 157, 0.6),
+              0 0 30px rgba(255, 107, 157, 0.4);
+}

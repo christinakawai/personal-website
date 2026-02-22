@@ -67,6 +67,7 @@
   padding: 1.5rem;
   opacity: 0;
   transition: opacity 0.3s;
+  flex-direction: column;
 }
 
 .carousel-item:hover .hover-overlay {
