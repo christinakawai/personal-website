@@ -128,7 +128,7 @@ body {
 /* ── CONTENT GRID (text + picture) ──────────────────── */
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 300px;
+  grid-template-columns: 2fr 500px;
   gap: 4rem;
   align-items: start;
   max-width: 1400px;
@@ -136,7 +136,7 @@ body {
 }
 
 .text-content {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   max-width: 900px;
 }
@@ -188,6 +188,7 @@ body {
 
 .about-text p {
   color: var(--muted);
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -197,13 +198,15 @@ body {
 }
 
 .about-photos img {
-  width: 100%;
-  border-radius: 8px;
+  width: 80%;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* ── TAGS ───────────────────────────────────────────── */
 h3 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -218,7 +221,20 @@ h3 {
   padding: 0.4rem 1rem;
   background: var(--pill-bg);
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
+}
+
+.tag:hover {
+  transform: scale(1.15) !important;
+  background: #ff6b9d;
+  color: white;
+  z-index: 10;
+}
+
+
+
+[data-theme="dark"] .cloud-tag {
+  color: #fefefe;
 }
 
 /* ── PROJECT CARDS ──────────────────────────────────── */
