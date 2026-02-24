@@ -318,9 +318,17 @@ h3 {
 .contact-box {
   background: var(--pill-bg);
   border: 2px solid var(--border);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 2rem;
-  margin: 2rem 15rem;
+  margin: 2rem 28rem;
+  height: 35rem;
+}
+
+.window-box {
+  height: 14rem;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background-color: #f4fafc;
 }
 
 .contact-box h3 {
@@ -360,6 +368,17 @@ h3 {
 
 .contact-links a:hover {
   transform: scale(1.05);
+}
+
+.glass-window {
+  height: 70px;
+  background: linear-gradient(
+    135deg,
+    rgba(200, 230, 255, 0.6),
+    rgba(150, 200, 255, 0.4)
+  );
+  border: 2px solid var(--border);
+  border-radius: 12px;
 }
 
 /* ── FOOTER ─────────────────────────────────────────── */
