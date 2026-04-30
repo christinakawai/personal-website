@@ -38,6 +38,7 @@ body {
   flex-direction: column;
 }
 
+
 /* ── TOP NAV PILLS ──────────────────────────────────── */
 .top-nav {
   display: flex;
@@ -313,41 +314,33 @@ h3 {
 /* ── CONTACT PAGE ───────────────────────────────────── */
 .contact-page {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contact-box {
-  background: var(--pill-bg);
-  border: 2px solid var(--border);
+  width: 700px;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+
+.vending-machine {
+  background: #ffe0eb;
+  width: 450px;
+  padding: 30px;
   border-radius: 20px;
-  padding: 2rem;
-  margin: 2rem 28rem;
-  height: 35rem;
+  border: 2px solid #ff6b9d;
+  position: relative;
 }
 
-.window-box {
-  height: 14rem;
-  border: 2px solid var(--border);
+.top-screen {
+  height: 250px;
+  background: #d9d9d9;
   border-radius: 20px;
-  background-color: #f4fafc;
-}
-
-.contact-box h3 {
-  color: #1a1a1a;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-.contact-box h3:first-child {
-  margin-top: 0;
-}
-
-.contact-email {
-  display: block;
-  font-size: 1.3rem;
-  color: var(--accent);
-  text-decoration: none;
-  margin-bottom: 1rem;
+  border: 2px solid #ff6b9d;
+  margin-bottom: 30px;
 }
 
 .contact-links {
@@ -355,6 +348,7 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 1.5rem;
 }
 
 .contact-links a {
@@ -370,15 +364,101 @@ h3 {
   transform: scale(1.05);
 }
 
-.glass-window {
-  height: 70px;
-  background: linear-gradient(
-    135deg,
-    rgba(200, 230, 255, 0.6),
-    rgba(150, 200, 255, 0.4)
-  );
-  border: 2px solid var(--border);
-  border-radius: 12px;
+.controls {
+  position: relative;
+}
+
+.display {
+  height: 40px;
+  width: 58%;
+  background: #fccd68;
+  margin-bottom: 20px;
+}
+
+.right-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 120px;
+  background: #fccd68;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.long-button {
+  width: 120px;
+  height: 50px;
+  background: #fccd68;
+  border-radius: 20px;
+}
+
+.small-button {
+  width: 40px;
+  height: 40px;
+  background: #fccd68;
+  border-radius: 50%;
+}
+
+/* Bottom Slot */
+.bottom-slot {
+  margin-top: 40px;
+  height: 120px;
+  background: #d9d9d9;
+  border-radius: 20px;
+  border: 2px solid #ff6b9d;
+}
+
+/* Feet */
+.feet {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.foot {
+  width: 120px;
+  height: 50px;
+  background: #cfcfcf;
+  border-radius: 30px;
+  border: 3px solid #ff6b9d;
+}
+
+.connector {
+  position: absolute;
+  right: -40px;
+  width: 40px;
+  height: 20px;
+  background: #cfcfcf;
+  border: 2px solid black;
+}
+
+.top-connector {
+  top: 140px;
+}
+
+.bottom-connector {
+  top: 220px;
+}
+
+/* Side Handle */
+.side-handle {
+  position: absolute;
+  right: -118px;          /* attach to right side */
+  top: 90px;
+  width: 80px;
+  height: 200px;
+  background: #9cc3c9;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.side-handle a {
+  text-orientation: upright;
 }
 
 /* ── FOOTER ─────────────────────────────────────────── */
